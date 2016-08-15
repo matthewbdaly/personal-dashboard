@@ -15,7 +15,8 @@ const FeedItem = React.createClass({
 export default React.createClass({
   getInitialState() {
     return {
-      feed: []
+      feed: [],
+      size: this.props.size || 5
     };
   },
   componentDidMount() {
@@ -39,7 +40,7 @@ export default React.createClass({
           feed.push(item);
         });
         that.setState({
-          feed: feed.slice(0,5)
+          feed: feed.slice(0,this.state.size)
         });
       }
     });

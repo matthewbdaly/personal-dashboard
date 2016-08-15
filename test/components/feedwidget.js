@@ -10,7 +10,7 @@ describe('Feed Widget', () => {
   it('renders the Feed widget', () => {
     const url = "http://feeds.bbci.co.uk/news/rss.xml?edition=uk"
     const component = renderIntoDocument(
-      <FeedWidget feed={url} />
+      <FeedWidget feed={url} size={5} />
     );
     const feed = findDOMNode(component.refs.feed);
     expect(feed).to.be.ok;
