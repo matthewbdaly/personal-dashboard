@@ -21,7 +21,7 @@ export default React.createClass({
   },
   componentDidMount() {
     this.getFeed();
-    this.interval = setInterval(this.getFeed, 60000);
+    this.interval = setInterval(this.getFeed, (this.props.delay * 1000));
   },
   componentWillUnmount() {
     clearInterval(this.interval);
