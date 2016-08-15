@@ -1,0 +1,72 @@
+@import 'colours';
+
+html, body {
+    background-color: $bgColour;
+    color: $txtColour;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.dashboard {
+    padding: 10px;
+}
+
+div.wrapper {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+}
+
+div.widget {
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+    min-height: 100px;
+    margin: 5px;
+    opacity: 0.8;
+    transition: opacity 1s;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    h2, h4 {
+        padding: 20px;
+    }
+
+    div.widget-content {
+        width: 100%;
+    }
+}
+
+div.clockwidget {
+    background-color: $clockBg;
+    color: $clockTxt;
+}
+
+div.feedwidget {
+    background-color: $feedBg;
+    color: $feedTxt;
+
+    h2 {
+        word-wrap: break-word;
+    }
+
+    ul {
+        margin-left: 0;
+        padding-left: 20px;
+
+        a {
+            text-decoration: none;
+            padding: 5px;
+
+            li {
+                list-style-type: none;
+                font-weight: bold;
+                color: $feedTxt;
+            }
+        }
+    }
+}
