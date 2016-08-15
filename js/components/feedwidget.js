@@ -39,7 +39,7 @@ export default React.createClass({
           feed.push(item);
         });
         that.setState({
-          feed: feed
+          feed: feed.slice(0,5)
         });
       }
     });
