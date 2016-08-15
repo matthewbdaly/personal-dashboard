@@ -5,7 +5,7 @@ window.jQuery = jQuery;
 const FeedItem = React.createClass({
   render() {
     return (
-      <a href={this.props.link}>
+      <a href={this.props.link} target="_blank">
         <li className="feeditem">{this.props.title}</li>
       </a>
     );
@@ -40,7 +40,7 @@ export default React.createClass({
           feed.push(item);
         });
         that.setState({
-          feed: feed.slice(0,this.state.size)
+          feed: feed.slice(0,that.state.size)
         });
       }
     });
