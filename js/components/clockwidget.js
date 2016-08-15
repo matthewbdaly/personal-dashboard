@@ -7,6 +7,17 @@ export default React.createClass({
       time: this.props.time || moment()
     };
   },
+  tick() {
+    this.setState({
+      time: moment()
+    });
+  },
+  componentDidMount() {
+    this.interval = setInterval(this.tick, 1000);
+  },
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  },
   render() {
     const time = moment(this.state.time).format('dddd, Do MMMM YYYY, h:mm:ss a');
     return (
