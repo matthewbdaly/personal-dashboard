@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover _mocha -- --compilers js:babel-core/register --require ./test/setup.js 'test/**/*.@(js|jsx)'",
+    "test:watch": "npm run test -- --watch",
+    "start": "webpack-dev-server --progress --colors",
+    "build": "webpack --progress --colors"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -23,6 +32,7 @@
     "eslint-loader": "^1.5.0",
     "eslint-plugin-react": "^6.1.0",
     "file-loader": "^0.9.0",
+    "istanbul": "^0.4.4",
     "jsdom": "^9.4.2",
     "mocha": "^3.0.2",
     "moment": "^2.14.1",
