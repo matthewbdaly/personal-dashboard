@@ -9,7 +9,7 @@ export default React.createClass({
         <h1 ref="title">{this.props.title}</h1>
         <div className="wrapper">
           <ClockWidget />
-          <FeedWidget feed="http://matthewdaly.co.uk/rss.xml" />
+          <FeedWidget feed="http://feeds.bbci.co.uk/news/rss.xml?edition=uk" />
         </div>
       </div>
     );
